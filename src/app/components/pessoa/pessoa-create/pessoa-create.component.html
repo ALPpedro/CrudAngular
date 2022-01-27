@@ -1,0 +1,65 @@
+<div class="container">
+    <form class="form">
+        <h1 class="fullwidth">Cadastro De Pessoa</h1>
+
+        <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Nome</mat-label>
+              <input [formControl]="nome" 
+              required
+              matInput
+              placeholder="Ex: João Da Silva">
+              <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Data de Nascimento</mat-label>
+              <input 
+              [formControl]="dataDeNascimento" 
+              required
+              type="date" 
+              matInput placeholder="Ex: 2002-07-18">
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>RG</mat-label>
+              <input  [formControl]="rg" 
+              required 
+              matInput 
+              placeholder="Ex: 569484806">
+              <mat-icon matSuffix>badge</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>CPF</mat-label>
+              <input 
+              [formControl]="cpf" 
+              required
+              matInput 
+              placeholder="Ex: 50604321812">
+              <mat-icon matSuffix>pin</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Telefone</mat-label>
+              <input 
+              [formControl]="telefone" 
+              required
+              matInput 
+              placeholder="Ex: 16994638883">
+              <mat-icon matSuffix>smartphone</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <button [disabled]="!validaCampos()" class="fullwidth" mat-stroked-button color="primary">Cadastrar</button>
+          <button class="fullwidth" mat-stroked-button color="warn" routerLink="../">Cancelar</button>
+    </form>
+</div>
