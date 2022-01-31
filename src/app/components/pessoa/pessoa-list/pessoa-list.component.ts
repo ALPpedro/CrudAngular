@@ -12,7 +12,7 @@ import { Pessoas } from 'src/app/models/pessoas';
 export class PessoaListComponent implements OnInit {
 
   ELEMENT_DATA: Pessoas[] = []
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','cpf','telefone'];
+  displayedColumns: string[] = ['id', 'nome', 'dataDeNascimento', 'rg','cpf','telefone'];
   dataSource = new MatTableDataSource<Pessoas>(this.ELEMENT_DATA);
   
   @ViewChild(MatPaginator) paginator: MatPaginator;

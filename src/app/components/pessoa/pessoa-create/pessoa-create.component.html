@@ -5,7 +5,10 @@
         <p>
             <mat-form-field class="fullwidth" appearance="legacy">
               <mat-label>Nome</mat-label>
-              <input [formControl]="nome" 
+              <input 
+              [(ngModel)]="pessoa.nome"
+              name="nome"
+              [formControl]="nome" 
               required
               matInput
               placeholder="Ex: João Da Silva">
@@ -17,6 +20,8 @@
             <mat-form-field class="fullwidth" appearance="legacy">
               <mat-label>Data de Nascimento</mat-label>
               <input 
+              [(ngModel)]="pessoa.dataDeNascimento"
+              name="dataDeNascimento"
               [formControl]="dataDeNascimento" 
               required
               type="date" 
@@ -27,7 +32,10 @@
           <p>
             <mat-form-field class="fullwidth" appearance="legacy">
               <mat-label>RG</mat-label>
-              <input  [formControl]="rg" 
+              <input 
+              [(ngModel)]="pessoa.rg"
+              name="rg"
+              [formControl]="rg" 
               required 
               matInput 
               placeholder="Ex: 569484806">
@@ -39,6 +47,8 @@
             <mat-form-field class="fullwidth" appearance="legacy">
               <mat-label>CPF</mat-label>
               <input 
+              [(ngModel)]="pessoa.cpf"
+              name="cpf"
               [formControl]="cpf" 
               required
               matInput 
@@ -51,6 +61,8 @@
             <mat-form-field class="fullwidth" appearance="legacy">
               <mat-label>Telefone</mat-label>
               <input 
+              [(ngModel)]="pessoa.telefone"
+              name="telefone"
               [formControl]="telefone" 
               required
               matInput 
@@ -59,7 +71,7 @@
             </mat-form-field>
           </p>
 
-          <button [disabled]="!validaCampos()" class="fullwidth" mat-stroked-button color="primary">Cadastrar</button>
+          <button (click)="create()" [disabled]="!validaCampos()" class="fullwidth" mat-stroked-button color="primary">Cadastrar</button>
           <button class="fullwidth" mat-stroked-button color="warn" routerLink="../">Cancelar</button>
     </form>
 </div>
