@@ -1,6 +1,6 @@
 <div class="container">
     <form class="form">
-        <h1 class="fullwidth">Cadastro De Pessoa</h1>
+        <h1 class="fullwidth">Atualizar Pessoa</h1>
 
         <p>
             <mat-form-field class="fullwidth" appearance="legacy">
@@ -73,7 +73,8 @@
             </mat-form-field>
           </p>
 
-          <button (click)="create()" [disabled]="!validaCampos()" class="fullwidth" mat-stroked-button color="primary">Cadastrar</button>
-          <button class="fullwidth" mat-stroked-button color="warn" routerLink="../">Cancelar</button>
+          <button (click)="update()" [disabled]="!validaCampos()" class="fullwidth" mat-stroked-button color="primary">Atualizar</button>
+          <button class="fullwidth" mat-stroked-button color="warn" routerLink="../../">Cancelar</button>
     </form>
 </div>
+

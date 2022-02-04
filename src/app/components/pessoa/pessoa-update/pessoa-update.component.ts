@@ -1,15 +1,15 @@
-import { Router } from '@angular/router';
-import { PessoaService } from './../../../services/pessoa.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PessoaService } from './../../../services/pessoa.service';
 import { FormControl, Validators } from '@angular/forms';
 import { Pessoas } from 'src/app/models/pessoas';
 
 @Component({
-  selector: 'app-pessoa-create',
-  templateUrl: './pessoa-create.component.html',
-  styleUrls: ['./pessoa-create.component.css']
+  selector: 'app-pessoa-update',
+  templateUrl: './pessoa-update.component.html',
+  styleUrls: ['./pessoa-update.component.css']
 })
-export class PessoaCreateComponent implements OnInit {
+export class PessoaUpdateComponent implements OnInit {
 
   pessoa: Pessoas ={
     id: '',
@@ -28,23 +28,30 @@ export class PessoaCreateComponent implements OnInit {
 
   constructor(
     private service: PessoaService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.pessoa.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
   }
   validaCampos(): boolean{
     return this.nome.valid && this.dataDeNascimento.valid 
     && this.rg.valid && this.cpf.valid && this.telefone.valid
   }
-
-  create(): void{
-    this.service.create(this.pessoa).subscribe(() =>{
-      console.log("oi")
+  findById(): void{
+    this.service.findById(this.pessoa.id).subscribe(resposta =>{
+      this.pessoa = resposta;
+    })
+  }
+  update(): void{
+    this.service.update(this.pessoa, this.pessoa.id).subscribe(() =>{
       this.router.navigate(['pessoas'])
     }, ex =>{
       console.log(ex)
     })
   }
+
 
 }

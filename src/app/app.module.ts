@@ -25,6 +25,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PessoaListComponent } from './components/pessoa/pessoa-list/pessoa-list.component';
 import { PessoaCreateComponent } from './components/pessoa/pessoa-create/pessoa-create.component';
+import { PessoaUpdateComponent } from './components/pessoa/pessoa-update/pessoa-update.component';
+import { PessoaDeleteComponent } from './components/pessoa/pessoa-delete/pessoa-delete.component';
+
+
 
 // Para realizar requisições HTTP
 // Imports para componentes do Angular Material
@@ -35,7 +39,9 @@ import { PessoaCreateComponent } from './components/pessoa/pessoa-create/pessoa-
     HomeComponent,
     HeaderComponent,
     PessoaListComponent,
-    PessoaCreateComponent
+    PessoaCreateComponent,
+    PessoaUpdateComponent,
+    PessoaDeleteComponent
   ],
   imports: [
     BrowserModule,

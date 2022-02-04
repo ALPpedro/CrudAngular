@@ -6,9 +6,20 @@
 table {
     width: 100%;
   } 
+.buscas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit{
+    color: rgb(53, 53, 250);
+}
+.delete{
+    color: red;
+}
 
   mat-form-field{
-      width: 100%;
+      width: 30%;
   }
 
   button{
