@@ -1,11 +1,8 @@
 <div class="container">
 
-  <button routerLink="create" mat-stroked-button color="primary">Adicionar Pessoa</button>
-
     <h1 style="margin-top: 1rem;">Listando Pessoas, Buscar por:</h1>
 
-    
-  <div class="buscas">
+    <div class="buscas">
     <mat-form-field appearance="standard">
         <h3>Nome</h3>
         <input
@@ -14,7 +11,7 @@
         matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
       </mat-form-field>
 
-      <mat-form-field appearance="standard" style="width: 15%;">
+      <mat-form-field appearance="standard" style="width: 18%;">
         <h3>Data de Nascimento</h3>
         <div class="data">
         <input
@@ -34,9 +31,10 @@
         matInput (keyup)="applyFilter($event)" placeholder="Ex. 16994638884" #input>
       </mat-form-field>
     </div>
-
+    
     <button (click)="loadTodos()" mat-stroked-button color="primary">Buscar Pessoa</button>
     <button (click)="voltar()" mat-stroked-button color="primary">Listar Todos</button>
+    <button routerLink="create" mat-stroked-button color="primary">Adicionar Pessoa</button>
 
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
@@ -84,7 +82,7 @@
         <a routerLink="update/{{ element.id }}">
           <i class="material-icons edit">edit</i>
         </a>
-        <a routerLink="">
+        <a routerLink="delete/{{ element.id }}">
           <i class="material-icons delete">delete</i>
         </a>
         </td>

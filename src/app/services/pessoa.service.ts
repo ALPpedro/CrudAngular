@@ -1,5 +1,4 @@
 import { Pessoas } from './../models/pessoas';
-import { environment } from './../../environments/environment';
 import { API_CONFIG } from './../config/api.config';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -25,6 +24,9 @@ export class PessoaService {
   }
   update(pessoa: Pessoas, id: any): Observable<Pessoas> {
     return this.http.put<Pessoas>(`${API_CONFIG.baseUrl}/${id}`, pessoa);
+  }
+  delete(id: any): Observable<Pessoas> {
+    return this.http.delete<Pessoas>(`${API_CONFIG.baseUrl}/${id}`);
   }
 
   listTodos(request) {

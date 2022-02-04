@@ -1,0 +1,28 @@
+.container{
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+
+    -webkit-box-shadow: 1px 1px 12px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    1px 1px 12px rgba(50, 50, 50, 0.77);
+    box-shadow:         1px 1px 12px rgba(50, 50, 50, 0.77);
+
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    margin-top: 0.5rem;
+}
+
+mat-icon{
+    opacity: .8;
+}

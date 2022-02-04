@@ -1,1 +1,71 @@
-<p>pessoa-delete works!</p>
+
+<div class="container">
+    <form class="form">
+        <h1 class="fullwidth">Deletar Pessoa</h1>
+
+        <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Nome</mat-label>
+              <input 
+              [(ngModel)]="pessoa.nome"
+              name="nome"
+              matInput
+              [disabled]="true">
+              <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Data de Nascimento</mat-label>
+              <input 
+              [(ngModel)]="pessoa.dataDeNascimento"
+              name="dataDeNascimento"
+              matInput
+              [disabled]="true">
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>RG</mat-label>
+              <input 
+              [(ngModel)]="pessoa.rg"
+              name="rg"
+              matInput
+              [disabled]="true">
+              <mat-icon matSuffix>badge</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>CPF</mat-label>
+              <input 
+              [(ngModel)]="pessoa.cpf"
+              name="cpf"
+              matInput
+              [disabled]="true">
+              <mat-icon matSuffix>pin</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Telefone</mat-label>
+              <input 
+              [(ngModel)]="pessoa.telefone"
+              name="telefone"
+              matInput
+              [disabled]="true">
+              <mat-icon matSuffix>smartphone</mat-icon>
+            </mat-form-field>
+          </p>
+
+          <h4>Deseja Realmente Deletar Essa Pessoa?</h4>
+
+          <button (click)="delete()" class="fullwidth" mat-stroked-button color="primary">Deletar</button>
+          <button class="fullwidth" mat-stroked-button color="warn" routerLink="../../">Cancelar</button>
+    </form>
+</div>
+

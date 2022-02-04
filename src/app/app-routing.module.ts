@@ -1,3 +1,4 @@
+import { PessoaDeleteComponent } from './components/pessoa/pessoa-delete/pessoa-delete.component';
 import { PessoaUpdateComponent } from './components/pessoa/pessoa-update/pessoa-update.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,7 +13,8 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'pessoas', component: PessoaListComponent },
     {path: 'pessoas/create', component: PessoaCreateComponent },
-    {path: 'pessoas/update/:id', component: PessoaUpdateComponent }
+    {path: 'pessoas/update/:id', component: PessoaUpdateComponent },
+    {path: 'pessoas/delete/:id', component: PessoaDeleteComponent }
 
   ]}
 ];
