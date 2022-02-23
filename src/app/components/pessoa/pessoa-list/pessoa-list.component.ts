@@ -63,17 +63,8 @@ export class PessoaListComponent implements OnInit {
     this.dataDeNascimento = ''
     this.telefone= ''
     this.loadTodos()
-    
   }
  
- /**  findAll(){
-    this.service.findAll().subscribe(resposta => {
-      this.ELEMENT_DATA = resposta;
-      this.dataSource = new MatTableDataSource<Pessoas>(this.ELEMENT_DATA);
-      this.dataSource.paginator = this.paginator;
-    })
-   }
-*/
    applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     const dataSour = new MatTableDataSource<Pessoas>(this.ELEMENT_DATA).filter = filterValue.trim().toLowerCase();

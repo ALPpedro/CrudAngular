@@ -40,9 +40,10 @@ export class PessoaCreateComponent implements OnInit {
 
   create(): void{
     this.service.create(this.pessoa).subscribe(() =>{
-      console.log("oi")
+      console.log(this.pessoa)
       this.router.navigate(['pessoas'])
     }, ex =>{
+      alert(ex)
       console.log(ex)
     })
   }
