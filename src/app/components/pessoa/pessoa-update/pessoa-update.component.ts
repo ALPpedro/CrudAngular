@@ -48,6 +48,7 @@ export class PessoaUpdateComponent implements OnInit {
   update(): void{
     this.service.update(this.pessoa, this.pessoa.id).subscribe(() =>{
       this.router.navigate(['pessoas'])
+      this.service.message('Usuario Atualizado com sucesso')
     }, ex =>{
       console.log(ex)
     })

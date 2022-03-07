@@ -3,13 +3,16 @@ import { API_CONFIG } from './../config/api.config';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PessoaService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private snack: MatSnackBar
+    ) { }
 
   findById(id: any): Observable<Pessoas>{
     return this.http.get<Pessoas>(`${API_CONFIG.baseUrl}/id/${id}`)
@@ -27,6 +30,14 @@ export class PessoaService {
   }
   delete(id: any): Observable<Pessoas> {
     return this.http.delete<Pessoas>(`${API_CONFIG.baseUrl}/${id}`);
+  }
+
+  message(msg: String): void{
+    this.snack.open(`${msg}`, 'ok', {
+      horizontalPosition: 'center',
+      verticalPosition: 'top', 
+      duration: 4000
+    })
   }
 
   listTodos(request) {

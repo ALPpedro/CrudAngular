@@ -49,6 +49,7 @@ export class PessoaDeleteComponent implements OnInit {
   delete(): void{
     this.service.delete(this.pessoa.id).subscribe(() =>{
       this.router.navigate(['pessoas'])
+      this.service.message('Usuario Deletado com sucesso')
     }, ex =>{
       console.log(ex)
     })

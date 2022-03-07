@@ -40,10 +40,17 @@ export class PessoaCreateComponent implements OnInit {
 
   create(): void{
     this.service.create(this.pessoa).subscribe(() =>{
-      console.log(this.pessoa)
+      this.service.message('Usuario Criado Com Sucesso')
       this.router.navigate(['pessoas'])
     }, ex =>{
-      alert(ex)
+      if(ex.error.cpf.match('invalido')){
+        this.service.message(ex.error.cpf)
+      }
+      if(ex.error.nome.match('vazio')){
+        this.service.message(ex.error.nome)
+      }
+      console.log(ex.error.cpf)
+      console.log(ex.error.nome)
       console.log(ex)
     })
   }
