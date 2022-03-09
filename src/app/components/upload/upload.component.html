@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="mb-3">
+    <input class="form-control" type="file" id="formFile" (change)="onChange($event)">
+  </div>
+  <div class="buttons" style="display: flex; justify-content: center;">
+  <button mat-stroked-button color="primary" (click)="upload()" [disabled]="!file">Enviar</button>
+  <button class="fullwidth" mat-stroked-button color="warn" routerLink="/pessoas">Cancelar</button>
+</div>
+</div>

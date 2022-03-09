@@ -1,0 +1,11 @@
+.container{
+    width: 30rem;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+
+    -webkit-box-shadow: 1px 1px 12px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    1px 1px 12px rgba(50, 50, 50, 0.77);
+    box-shadow:         1px 1px 12px rgba(50, 50, 50, 0.77);
+}

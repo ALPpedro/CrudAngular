@@ -27,6 +27,7 @@ import { PessoaListComponent } from './components/pessoa/pessoa-list/pessoa-list
 import { PessoaCreateComponent } from './components/pessoa/pessoa-create/pessoa-create.component';
 import { PessoaUpdateComponent } from './components/pessoa/pessoa-update/pessoa-update.component';
 import { PessoaDeleteComponent } from './components/pessoa/pessoa-delete/pessoa-delete.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 
 
@@ -41,7 +42,8 @@ import { PessoaDeleteComponent } from './components/pessoa/pessoa-delete/pessoa-
     PessoaListComponent,
     PessoaCreateComponent,
     PessoaUpdateComponent,
-    PessoaDeleteComponent
+    PessoaDeleteComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
